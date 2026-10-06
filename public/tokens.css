@@ -1,0 +1,203 @@
+/* =============================================================
+   Home design tokens (source: design-system-home skill)
+   Surface: dark dashboard web app, WCAG 2.2 AA
+   Rule: components must reference these semantic tokens, never raw values.
+   ============================================================= */
+
+/* -------------------------------------------------------------
+   Font loading (decided): Barlow is loaded in the HTML <head>, not here.
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap">
+   Weights 400/500/600 match --font-weight-base/-medium/-semibold.
+   Do NOT add a Google Fonts @import to this file; @import blocks rendering
+   and delays the font.
+   ------------------------------------------------------------- */
+
+:root {
+  color-scheme: dark;
+
+  /* ---------- Typography ---------- */
+  --font-family-primary: "Barlow";
+  --font-family-stack: "Barlow", sans-serif;
+  --font-size-base: 16px;
+  --font-weight-base: 400;
+  --font-line-height-base: 24px;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 30px;
+  --font-size-3xl: 48px;
+  --font-size-4xl: 60px;
+
+  /* ---------- Color ---------- */
+  --color-text-primary: #ffffff;
+  --color-text-tertiary: oklab(0.999994 0.0000455677 0.0000200868 / 0.8);
+  --color-text-inverse: oklab(0.999994 0.0000455677 0.0000200868 / 0.7);
+  --color-surface-base: #000000;
+  --color-surface-raised: #0a0a0a;
+  --color-surface-strong: #111111;
+
+  /* ---------- Spacing ---------- */
+  --space-1: 4px;
+  --space-2: 5px;
+  --space-3: 8px;
+  --space-4: 10px;
+  --space-5: 12px;
+  --space-6: 15px;
+  --space-7: 16px;
+  --space-8: 20px;
+
+  /* ---------- Radius ---------- */
+  --radius-xs: 12px;
+  --radius-sm: 26843500px; /* effectively a full pill */
+
+  /* ---------- Shadow ---------- */
+  --shadow-1: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset;
+  --shadow-2: rgba(0, 0, 0, 0.05) 4px 4px 4px 0px, rgba(255, 255, 255, 0.15) 0px 1px 1px 0px inset;
+
+  /* ---------- Motion ---------- */
+  --motion-duration-instant: 150ms;
+  --motion-duration-fast: 300ms;
+
+  /* ---------- PROPOSED (not yet in the skill; pending approval) ----------
+     See "Deviations from the skill" at the bottom of this file. */
+
+  /* State support */
+  --color-feedback-error: #ff6b6b;   /* 7.6:1 on --color-surface-base */
+  /* Brand (Hinton Media). Exact value from the logo: RGB 244, 188, 30. */
+  --color-brand-accent: #f4bc1e;     /* 12.1:1 base, 11.4:1 raised, 10.8:1 strong. Headings, highlights, accents on dark surfaces only */
+  --color-text-accent: var(--color-brand-accent);       /* accent text (headings, labels) on dark surfaces */
+  --color-text-on-accent: var(--color-surface-base);    /* text on an accent fill MUST be black: 12.1:1 (white is 1.7:1, fails) */
+  --color-placeholder: #4dd8e6;      /* cyan; 12.3:1 base, 11.6:1 raised, 11.0:1 strong. Missing-content marker, deliberately NOT brand yellow and NOT error red */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--color-text-primary); /* 21:1 on --color-surface-base */
+
+  /* Typography additions */
+  --font-weight-medium: 500;         /* labels, buttons */
+  --font-weight-semibold: 600;       /* headings */
+  --font-line-height-tight: 1.2;     /* headings at --font-size-xl and up */
+  --letter-spacing-wide: 0.08em;     /* wordmark / uppercase brand text */
+
+  /* Borders */
+  --border-width-1: 1px;             /* field borders, hairlines, error border */
+  --border-width-2: 2px;             /* spinner stroke, emphasis rules */
+
+  /* Layout spacing (extends --space-1..8; use for sections and page layout only) */
+  --space-9: 24px;
+  --space-10: 32px;
+  --space-11: 40px;
+  --space-12: 60px;
+  --space-13: 80px;
+  --space-14: 120px;
+
+  /* Semantic layout spacing: components must use these, not raw --space-9..14 */
+  --space-layout-gutter: var(--space-8);          /* 20px page side padding */
+  --space-section: var(--space-13);               /* 80px between sections */
+  --space-hero-block-start: var(--space-14);      /* 120px above hero content */
+  --space-hero-block-end: var(--space-12);        /* 60px below hero content */
+  --space-heading-after: var(--space-11);         /* 40px section title to content */
+  --space-heading-after-with-lead: var(--space-8);/* 20px section title to lead paragraph */
+  --space-lead-after: var(--space-11);            /* 40px lead paragraph to content */
+  --space-card-padding: var(--space-9);           /* 24px inside cards */
+  --space-grid-gap: var(--space-9);               /* 24px between cards */
+  --space-footer-block: var(--space-11);          /* 40px footer top/bottom padding */
+
+  /* Sizes */
+  --size-tap-target-min: 44px;       /* minimum interactive target, all breakpoints */
+  --size-icon: 16px;                 /* inline icons and spinner diameter */
+  --size-icon-lg: 32px;              /* decorative icons in service cards */
+  --size-spinner: var(--size-icon);
+  --size-header-height: 80px;        /* sticky header; also scroll-margin-top for anchors */
+  --size-card-min: 280px;            /* min column width in auto-fit card grids */
+  --size-form-max: 480px;            /* max width of single-column forms */
+  --layout-max-width: 1200px;        /* main content container */
+  --button-max-width: 320px;         /* content-sized buttons and link-buttons */
+  --aspect-ratio-thumb: 16 / 9;      /* project card thumbnail frame */
+  --size-chamfer: 20px;              /* cut-corner depth on service-group cards */
+  --color-frame-subtle: var(--color-text-primary); /* thin chamfered card frame on dark */
+  --color-list-marker: var(--color-text-accent);   /* service-group bullet markers */
+  --size-logo-header: 40px;          /* brand mark height in sticky header */
+  --size-logo-footer: 28px;          /* brand mark height in footer */
+  --size-logo-clearance: 0.25;       /* unitless: clear space = this × mark height */
+  --size-client-logo: 56px;          /* max logo artwork height inside a slot */
+  --size-client-slot-min: 140px;     /* min width of equal client logo slots */
+  --color-logo-tile: #ffffff;        /* light plate behind client logos on dark surfaces; 21:1 with black artwork */
+}
+
+/* Below 48em (768px), large section spacing steps down one notch. */
+@media (max-width: 47.99em) {
+  :root {
+    --space-section: var(--space-12);              /* 60px */
+    --space-hero-block-start: var(--space-13);     /* 80px */
+    --space-hero-block-end: var(--space-11);       /* 40px */
+    --space-heading-after: var(--space-10);        /* 32px */
+    --space-lead-after: var(--space-10);           /* 32px */
+    --space-footer-block: var(--space-10);         /* 32px */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-instant: 0ms;
+    --motion-duration-fast: 0ms;
+  }
+}
+
+/* Base document defaults */
+html {
+  font-family: var(--font-family-stack);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
+  line-height: var(--font-line-height-base);
+  color: var(--color-text-primary);
+  background: var(--color-surface-base);
+}
+
+/* =============================================================
+   Deviations from the skill (design-system-home)
+   -------------------------------------------------------------
+   1. Font stack: ONE stack only, --font-family-stack = "Barlow", sans-serif,
+      exactly as the skill defines. The earlier --font-family-stack-system
+      proposal is withdrawn (QA N06). Barlow covers Vietnamese.
+   2. Added tokens: everything in the PROPOSED block. The skill has no error
+      color, focus ring, extra weights, tight line height, border widths,
+      layout-scale spacing, or size tokens, all of which the required states
+      and page layout need.
+   3. Spacing beyond 20px: --space-9..14 extend the scale for page layout only.
+      Component internals must stay on --space-1..8.
+   4. Section spacing changes from the current build: lead paragraph margin
+      30px -> 40px (--space-lead-after); title-to-lead uses
+      --space-heading-after-with-lead (20px) instead of a -20px margin;
+      card padding 28px -> 24px (--space-card-padding).
+   5. --size-icon-lg (32px): service-card decorative icons. The skill only
+      implies inline icon size via button/spinner needs; 16px (--size-icon)
+      is too small for a card lead icon.
+   6. --letter-spacing-wide (0.08em): text wordmark tracking. The skill has
+      no letter-spacing tokens.
+   7. --aspect-ratio-thumb (16 / 9): project-grid thumbnail frame. The skill
+      has no aspect-ratio tokens.
+   8. --color-placeholder (#4dd8e6, cyan; was amber, changed so it can't be
+      confused with the brand yellow) marks "[CẦN BỔ SUNG — …]" content
+      that is missing from verified sources (see placeholder.md). It is kept
+      distinct from --color-feedback-error so it is never mistaken for a form
+      error. It is a pre-launch tool: no placeholder may ship to production.
+   9. Brand accent: --color-brand-accent (#f4bc1e, exact, from the
+      logo) with --color-text-accent and --color-text-on-accent. Yellow is
+      used as text/accent on dark surfaces; any yellow fill must carry black
+      text. White on yellow is prohibited (1.7:1).
+   10. Chamfered service-group cards: --size-chamfer (20px),
+       --color-frame-subtle (white via text-primary), --color-list-marker
+       (accent yellow). Profile uses cut TL/BR corners; CSS border cannot
+       follow clip-path, so the frame is a double-layer clip technique.
+   11. Brand logo sizes: --size-logo-header (40px), --size-logo-footer (28px),
+       --size-logo-clearance (0.25 × height). No SVG in hinton-assets/web yet;
+       PNG/WebP with width/height attrs. White HINTON word needs dark surfaces only.
+   12. Client logo wall: --size-client-logo (56px), --size-client-slot-min (140px),
+       --color-logo-tile (#ffffff) light plate so dark-ink logos stay legible on
+       the dark site. filter: invert is prohibited.
+   ============================================================= */

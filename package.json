@@ -1,0 +1,26 @@
+{
+  "name": "hinton-media-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Hinton Media: website tĩnh + khu học viên (khóa học video trả phí qua chuyển khoản) + trang quản trị",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "create-admin": "node scripts/create-admin.js",
+    "seed-demo": "node scripts/seed-demo.js",
+    "verify": "node scripts/verify-e2e.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^13.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "marked": "^18.1.0",
+    "multer": "^2.4.0",
+    "sanitize-html": "^2.18.0"
+  }
+}

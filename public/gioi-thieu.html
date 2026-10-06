@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giới thiệu | Hinton Media</title>
+  <meta name="description" content="Hinton Media – Công ty TNHH Hinton Group, đối tác chiến lược cung cấp các giải pháp toàn diện giúp cá nhân và doanh nghiệp thành công trong kỷ nguyên số.">
+  <!-- TODO(domain): no official domain yet ([CẦN BỔ SUNG — tên miền chính thức]). Once confirmed, add:
+         <link rel="canonical" href="https://DOMAIN/gioi-thieu.html">
+         <meta property="og:url" content="https://DOMAIN/gioi-thieu.html">
+       and change og:image below to the absolute https://DOMAIN/assets/photos/team-suits-group.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="Hinton Media">
+  <meta property="og:title" content="Giới thiệu | Hinton Media">
+  <meta property="og:description" content="Hinton Media – Công ty TNHH Hinton Group, đối tác chiến lược cung cấp các giải pháp toàn diện giúp cá nhân và doanh nghiệp thành công trong kỷ nguyên số.">
+  <meta property="og:image" content="assets/photos/team-suits-group.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1280">
+  <meta property="og:image:alt" content="Nhóm mười người, nam và nữ, mặc vest tối màu đứng tạo dáng trước phông nền trắng">
+  <!-- Favicons: 32×32 PNG + 180×180 apple-touch-icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
+  <!-- Barlow: loaded here (not via CSS @import). Weights 400/500/600 = --font-weight-base/-medium/-semibold. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+    /* Image fallback: if an <img data-fallback> fails to load, hide it and reveal the
+       visible text next to it (.img-fallback) so the name never disappears.
+       Capture phase, registered in <head>, so it runs before any image can fail. */
+    window.addEventListener('error', function (e) {
+      var img = e.target;
+      if (!img || img.tagName !== 'IMG' || !img.hasAttribute('data-fallback')) return;
+      var box = img.closest('[data-fallback-box]');
+      var text = box && box.querySelector('.img-fallback');
+      if (!text) return;
+      img.hidden = true;
+      text.hidden = false;
+      text.removeAttribute('aria-hidden');
+      box.classList.add('logo-missing');
+    }, true);
+  </script>
+  <script src="contact.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua, đến nội dung chính</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand logo: design/logo-usage.md + site-header.md §3.1. Links home; aria-current only on index.html. -->
+      <a class="brand-logo-link" href="index.html" data-fallback-box>
+        <picture>
+          <source type="image/webp" srcset="assets/logo/logo-horizontal.webp">
+          <img class="brand-logo brand-logo-header" src="assets/logo/logo-horizontal.png" width="197" height="40" alt="Hinton Media" decoding="async" data-fallback>
+        </picture>
+        <span class="wordmark img-fallback" hidden aria-hidden="true">Hinton Media</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-list" id="primary-menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gioi-thieu.html" aria-current="page">Giới thiệu</a></li>
+          <li><a href="dich-vu.html">Dịch vụ</a></li>
+          <li><a href="khoa-hoc.html">Khóa học</a></li>
+          <li><a href="tin-tuc.html">Tin tức</a></li>
+          <li><a href="hoat-dong.html">Hoạt động</a></li>
+          <li><a href="khach-hang.html">Khách hàng</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+          <!-- Account link (site.js swaps it to "Bài học của tôi" / "Quản trị" when logged in on the Node server) -->
+          <li class="nav-item-account"><a class="nav-account-link" href="dang-nhap.html" data-account-link>Đăng nhập</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Page header: design/page-header.md -->
+    <header class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Đường dẫn trang">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+            <li class="breadcrumb-item"><span aria-current="page">Giới thiệu</span></li>
+          </ol>
+        </nav>
+        <h1 class="page-title section-heading" id="page-title">
+          <span class="section-heading-en" lang="en" aria-hidden="true">about us</span>
+          <span class="section-heading-rule" aria-hidden="true"></span>
+          <span class="section-heading-vi">Về chúng tôi</span>
+        </h1>
+      </div>
+    </header>
+    <!-- GIỚI THIỆU — brief §2.4, entity "Pháp nhân" (sitemap §3.2) -->
+    <div class="page-body">
+      <div class="container">
+        <!-- Copy verbatim from reference/hinton-assets/content-from-profile.md ("Về chúng tôi"). -->
+        <div class="prose">
+          <p><strong>Hinton Media</strong> với nhiều năm kinh nghiệm tự hào là đối tác chiến lược, cung cấp các giải pháp toàn diện giúp cá nhân và doanh nghiệp thành công trong kỷ nguyên số.</p>
+          <ul class="about-list" role="list">
+            <li class="about-item">Chúng tôi sẽ biến ý tưởng thành những thước phim và hình ảnh "biết nói", chạm đến cảm xúc của bạn. Dịch vụ trọn gói từ sáng tạo đến hậu kỳ, đảm bảo sản phẩm không chỉ chuyên nghiệp mà còn độc đáo, cuốn hút, nâng tầm thương hiệu của bạn.</li>
+            <li class="about-item">Hinton Media là đơn vị tiên phong chuyên cung cấp các chương trình đào tạo chuyên sâu về xây dựng thương hiệu và chiến lược kinh doanh hiệu quả trên các nền tảng mạng xã hội phổ biến như Tiktok, Facebook, Youtube, Google,... Mr. Bùi Hữu Thắng - chuyên gia với bề dày kinh nghiệm giảng dạy và thực chiến tại các khóa học, workshop và các chương trình coaching 1:1.</li>
+            <li class="about-item">Chúng tôi cung cấp các tài khoản mạng xã hội (TikTok, Facebook, YouTube, Google...) chất lượng, giúp bạn khởi đầu hoặc mở rộng quy mô kênh một cách nhanh chóng và hiệu quả. Đồng thời, Hinton Media mang đến các công cụ hỗ trợ tăng tương tác đã được kiểm duyệt nghiêm ngặt, đảm bảo an toàn, giúp tối ưu hóa hiệu suất, tăng lượt theo dõi và tương tác thật, thúc đẩy kênh phát triển mạnh mẽ.</li>
+          </ul>
+          <p><span class="placeholder">[CẦN BỔ SUNG — câu chuyện hình thành / đội ngũ]</span></p>
+        </div>
+        <p class="legal-note">Công ty TNHH Hinton Group (tên giao dịch quốc tế: HINTON GROUP COMPANY LIMITED) · Mã số thuế 0202209999 · Thành lập ngày 05/08/2023 · Người đại diện theo pháp luật: Bùi Hữu Thắng · Trụ sở đăng ký: Tổ dân phố Phí Xá (Nhà ông Bùi Văn Tuyến), Phường An Phong, Thành phố Hải Phòng.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER — design/site-footer.md: brand · footer nav · compact contact · legal -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- Static mark: the footer nav already has "Trang chủ", so no second logo link (logo-usage.md §3.3) -->
+      <p class="brand-logo-static" data-fallback-box>
+        <picture>
+          <source type="image/webp" srcset="assets/logo/logo-horizontal.webp">
+          <img class="brand-logo brand-logo-footer" src="assets/logo/logo-horizontal.png" width="138" height="28" alt="Hinton Media" decoding="async" loading="lazy" data-fallback>
+        </picture>
+        <span class="wordmark wordmark-footer img-fallback" hidden aria-hidden="true">Hinton Media</span>
+      </p>
+      <nav class="footer-nav" aria-label="Điều hướng chân trang">
+        <ul class="footer-nav-list" role="list">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gioi-thieu.html" aria-current="page">Giới thiệu</a></li>
+          <li><a href="dich-vu.html">Dịch vụ</a></li>
+          <li><a href="khoa-hoc.html">Khóa học</a></li>
+          <li><a href="tin-tuc.html">Tin tức</a></li>
+          <li><a href="hoat-dong.html">Hoạt động</a></li>
+          <li><a href="khach-hang.html">Khách hàng</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+<!-- ============ CONTACT INFO — no-JS FALLBACK, FOOTER (START) — same values as CONTACT in contact.js; identical on all 14 pages ============ -->
+      <p class="footer-contact">
+        <span class="footer-contact-phones" data-contact="phones"><a class="contact-link contact-link-tel" href="tel:+84365061186"><span class="visually-hidden">Gọi </span>0365 061 186</a><a class="contact-link contact-link-tel" href="tel:+84902223730"><span class="visually-hidden">Gọi </span>090 222 37 30</a></span>
+        <span data-contact="email"><a class="contact-link contact-link-mail" href="mailto:buihuuthangvimaon@gmail.com">buihuuthangvimaon@gmail.com</a></span>
+      </p>
+<!-- ============ CONTACT INFO — no-JS FALLBACK, FOOTER (END) ============ -->
+      <div class="footer-legal">
+        <p>© 2026 Hinton Media / Công ty TNHH Hinton Group · MST: 0202209999</p>
+        <p>Địa chỉ đăng ký: Phường An Phong, Hải Phòng</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

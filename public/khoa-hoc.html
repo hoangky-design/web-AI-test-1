@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khóa học | Hinton Media</title>
+  <meta name="description" content="Khóa học của Hinton Media tại Hải Phòng: các khóa học, workshop và chương trình coaching 1:1 về xây dựng thương hiệu và kinh doanh trên mạng xã hội. Hotline 0365 061 186 · 090 222 37 30.">
+  <!-- TODO(domain): no official domain yet ([CẦN BỔ SUNG — tên miền chính thức]). Once confirmed, add:
+         <link rel="canonical" href="https://DOMAIN/khoa-hoc.html">
+         <meta property="og:url" content="https://DOMAIN/khoa-hoc.html">
+       and change og:image below to the absolute https://DOMAIN/assets/photos/team-suits-group.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="Hinton Media">
+  <meta property="og:title" content="Khóa học | Hinton Media">
+  <meta property="og:description" content="Khóa học của Hinton Media tại Hải Phòng: các khóa học, workshop và chương trình coaching 1:1 về xây dựng thương hiệu và kinh doanh trên mạng xã hội. Hotline 0365 061 186 · 090 222 37 30.">
+  <meta property="og:image" content="assets/photos/team-suits-group.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1280">
+  <meta property="og:image:alt" content="Nhóm mười người, nam và nữ, mặc vest tối màu đứng tạo dáng trước phông nền trắng">
+  <!-- Favicons: 32×32 PNG + 180×180 apple-touch-icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
+  <!-- Barlow: loaded here (not via CSS @import). Weights 400/500/600 = --font-weight-base/-medium/-semibold. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+    /* Image fallback: if an <img data-fallback> fails to load, hide it and reveal the
+       visible text next to it (.img-fallback) so the name never disappears.
+       Capture phase, registered in <head>, so it runs before any image can fail. */
+    window.addEventListener('error', function (e) {
+      var img = e.target;
+      if (!img || img.tagName !== 'IMG' || !img.hasAttribute('data-fallback')) return;
+      var box = img.closest('[data-fallback-box]');
+      var text = box && box.querySelector('.img-fallback');
+      if (!text) return;
+      img.hidden = true;
+      text.hidden = false;
+      text.removeAttribute('aria-hidden');
+      box.classList.add('logo-missing');
+    }, true);
+  </script>
+  <script src="contact.js" defer></script>
+  <script src="courses.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua, đến nội dung chính</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand logo: design/logo-usage.md + site-header.md §3.1. Links home; aria-current only on index.html. -->
+      <a class="brand-logo-link" href="index.html" data-fallback-box>
+        <picture>
+          <source type="image/webp" srcset="assets/logo/logo-horizontal.webp">
+          <img class="brand-logo brand-logo-header" src="assets/logo/logo-horizontal.png" width="197" height="40" alt="Hinton Media" decoding="async" data-fallback>
+        </picture>
+        <span class="wordmark img-fallback" hidden aria-hidden="true">Hinton Media</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-list" id="primary-menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="dich-vu.html">Dịch vụ</a></li>
+          <li><a href="khoa-hoc.html" aria-current="page">Khóa học</a></li>
+          <li><a href="tin-tuc.html">Tin tức</a></li>
+          <li><a href="hoat-dong.html">Hoạt động</a></li>
+          <li><a href="khach-hang.html">Khách hàng</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+          <!-- Account link (site.js swaps it to "Bài học của tôi" / "Quản trị" when logged in on the Node server) -->
+          <li class="nav-item-account"><a class="nav-account-link" href="dang-nhap.html" data-account-link>Đăng nhập</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Page header + hero: design/page-header.md (breadcrumb + single H1) laid out on the .hero-inner grid -->
+    <header class="page-header course-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Đường dẫn trang">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+            <li class="breadcrumb-item"><span aria-current="page">Khóa học</span></li>
+          </ol>
+        </nav>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <h1 class="page-title section-heading" id="page-title">
+              <span class="section-heading-en" lang="en" aria-hidden="true">courses</span>
+              <span class="section-heading-rule" aria-hidden="true"></span>
+              <span class="section-heading-vi">Khóa học</span>
+            </h1>
+            <!-- Intro: wording from gioi-thieu.html (content-from-profile.md, "Về chúng tôi"), shortened; no new claims -->
+            <p class="page-intro">Các khóa học, workshop và chương trình coaching 1:1 về xây dựng thương hiệu và kinh doanh trên các nền tảng mạng xã hội.</p>
+            <p><span class="placeholder">[CẦN BỔ SUNG — thông điệp chính của trang khóa học]</span></p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#danh-sach" title="Xem khóa học"><span class="btn-label">Xem khóa học</span></a>
+              <a class="btn btn-secondary" href="#dang-ky" title="Đăng ký ngay"><span class="btn-label">Đăng ký ngay</span></a>
+            </div>
+          </div>
+          <!-- Same photo + alt as hoat-dong.html (workshop). Above the fold on desktop → not lazy. -->
+          <picture class="hero-media">
+            <source type="image/webp" srcset="assets/photos/workshop-drive-02.webp">
+            <img class="hero-photo" src="assets/photos/workshop-drive-02.jpg" width="1920" height="1280" decoding="async"
+                 alt="Hội trường đông người, nhiều người giơ tay hướng lên phía trước, nơi có người đứng cạnh các standee">
+          </picture>
+        </div>
+      </div>
+    </header>
+
+    <!-- DANH SÁCH KHÓA HỌC — cards rendered by courses.js from COURSES -->
+    <section class="section" id="danh-sach" tabindex="-1" aria-labelledby="danh-sach-title">
+      <div class="container">
+        <h2 class="section-title" id="danh-sach-title">Danh sách khóa học</h2>
+<!-- ================================================================
+     COURSES — no-JS FALLBACK: CARDS (START)
+     Single source of truth: the COURSES array in courses.js. To change a course:
+     edit COURSES, then copy the same values here AND into the <option>s of
+     #rf-course below (what visitors see when JavaScript is off; with JavaScript
+     on, courses.js rebuilds both). Thumbnails: temporary workshop photos from
+     hoat-dong.html until each course has its own ([CẦN BỔ SUNG — ảnh từng khóa học]).
+     ================================================================ -->
+        <ul class="card-grid course-grid" role="list" data-courses="list">
+          <li class="course-card" data-course-id="khoa-hoc-1">
+            <article class="course-card-inner" aria-labelledby="course-khoa-hoc-1-title">
+              <div class="course-card-media" data-fallback-box>
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/workshop-drive-03.webp">
+                  <img class="course-card-thumb" src="assets/photos/workshop-drive-03.jpg" width="1920" height="1440" alt="Một người mặc áo sơ mi trắng đứng nói trong phòng học, học viên ngồi tại các dãy bàn dài, nhiều người đang ghi chép" loading="lazy" decoding="async" data-fallback>
+                </picture>
+                <span class="placeholder placeholder-block course-card-placeholder img-fallback" hidden aria-hidden="true">[CẦN BỔ SUNG — ảnh khóa học]</span>
+              </div>
+              <div class="course-card-body">
+                <h3 class="course-card-title" id="course-khoa-hoc-1-title"><span class="placeholder">[CẦN BỔ SUNG — tên khóa học 1]</span></h3>
+                <p class="course-card-text"><span class="placeholder">[CẦN BỔ SUNG — mô tả ngắn]</span></p>
+                <dl class="course-meta">
+                  <div class="course-meta-row"><dt class="course-meta-label">Thời lượng</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — thời lượng]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Số buổi học</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — số buổi]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Trình độ</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — trình độ]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Hình thức</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — online / offline]</span></dd></div>
+                </dl>
+                <p class="course-price"><span class="course-price-label">Học phí</span><span class="course-price-value"><span class="placeholder">[CẦN BỔ SUNG — học phí]</span></span></p>
+                <a class="btn btn-primary course-cta" href="#dang-ky" data-course-select="khoa-hoc-1" aria-describedby="course-khoa-hoc-1-title" title="Đăng ký / Mua bài học"><span class="btn-label">Đăng ký / Mua bài học</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="course-card" data-course-id="khoa-hoc-2">
+            <article class="course-card-inner" aria-labelledby="course-khoa-hoc-2-title">
+              <div class="course-card-media" data-fallback-box>
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/workshop-drive-04.webp">
+                  <img class="course-card-thumb" src="assets/photos/workshop-drive-04.jpg" width="1920" height="1278" alt="Một người mặc vest đứng giữa lối đi dang tay, phía sau là lớp học đông người ngồi trước máy tính xách tay" loading="lazy" decoding="async" data-fallback>
+                </picture>
+                <span class="placeholder placeholder-block course-card-placeholder img-fallback" hidden aria-hidden="true">[CẦN BỔ SUNG — ảnh khóa học]</span>
+              </div>
+              <div class="course-card-body">
+                <h3 class="course-card-title" id="course-khoa-hoc-2-title"><span class="placeholder">[CẦN BỔ SUNG — tên khóa học 2]</span></h3>
+                <p class="course-card-text"><span class="placeholder">[CẦN BỔ SUNG — mô tả ngắn]</span></p>
+                <dl class="course-meta">
+                  <div class="course-meta-row"><dt class="course-meta-label">Thời lượng</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — thời lượng]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Số buổi học</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — số buổi]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Trình độ</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — trình độ]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Hình thức</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — online / offline]</span></dd></div>
+                </dl>
+                <p class="course-price"><span class="course-price-label">Học phí</span><span class="course-price-value"><span class="placeholder">[CẦN BỔ SUNG — học phí]</span></span></p>
+                <a class="btn btn-primary course-cta" href="#dang-ky" data-course-select="khoa-hoc-2" aria-describedby="course-khoa-hoc-2-title" title="Đăng ký / Mua bài học"><span class="btn-label">Đăng ký / Mua bài học</span></a>
+              </div>
+            </article>
+          </li>
+          <li class="course-card" data-course-id="khoa-hoc-3">
+            <article class="course-card-inner" aria-labelledby="course-khoa-hoc-3-title">
+              <div class="course-card-media" data-fallback-box>
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/workshop-speaker-audience.webp">
+                  <img class="course-card-thumb" src="assets/photos/workshop-speaker-audience.jpg" width="1920" height="1280" alt="Một người mặc vest đứng quay lưng về phía máy ảnh, nhìn ra hội trường kín chỗ ngồi" loading="lazy" decoding="async" data-fallback>
+                </picture>
+                <span class="placeholder placeholder-block course-card-placeholder img-fallback" hidden aria-hidden="true">[CẦN BỔ SUNG — ảnh khóa học]</span>
+              </div>
+              <div class="course-card-body">
+                <h3 class="course-card-title" id="course-khoa-hoc-3-title"><span class="placeholder">[CẦN BỔ SUNG — tên khóa học 3]</span></h3>
+                <p class="course-card-text"><span class="placeholder">[CẦN BỔ SUNG — mô tả ngắn]</span></p>
+                <dl class="course-meta">
+                  <div class="course-meta-row"><dt class="course-meta-label">Thời lượng</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — thời lượng]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Số buổi học</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — số buổi]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Trình độ</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — trình độ]</span></dd></div>
+                  <div class="course-meta-row"><dt class="course-meta-label">Hình thức</dt><dd class="course-meta-value"><span class="placeholder">[CẦN BỔ SUNG — online / offline]</span></dd></div>
+                </dl>
+                <p class="course-price"><span class="course-price-label">Học phí</span><span class="course-price-value"><span class="placeholder">[CẦN BỔ SUNG — học phí]</span></span></p>
+                <a class="btn btn-primary course-cta" href="#dang-ky" data-course-select="khoa-hoc-3" aria-describedby="course-khoa-hoc-3-title" title="Đăng ký / Mua bài học"><span class="btn-label">Đăng ký / Mua bài học</span></a>
+              </div>
+            </article>
+          </li>
+        </ul>
+<!-- ================= COURSES — no-JS FALLBACK: CARDS (END) ================= -->
+        <!-- Student area (Node server): buy by bank transfer, then watch the videos on the site -->
+        <p class="course-online-note">Học online qua video: <a class="text-link" href="dang-ky.html">tạo tài khoản</a> hoặc <a class="text-link" href="bai-hoc-cua-toi.html">vào Bài học của tôi</a> để mua bằng chuyển khoản và xem ngay trên website.</p>
+      </div>
+    </section>
+
+    <!-- QUY TRÌNH MUA — neutral steps; payment and delivery details are not verified yet -->
+    <section class="section" id="quy-trinh" aria-labelledby="quy-trinh-title">
+      <div class="container">
+        <h2 class="section-title" id="quy-trinh-title">Quy trình mua</h2>
+        <ol class="course-steps" role="list">
+          <li class="course-step">
+            <h3 class="course-step-title">Chọn khóa học</h3>
+            <p class="course-step-text">Xem danh sách bên trên và chọn khóa học phù hợp.</p>
+          </li>
+          <li class="course-step">
+            <h3 class="course-step-title">Đăng ký</h3>
+            <p class="course-step-text">Điền biểu mẫu đăng ký bên dưới hoặc gọi hotline.</p>
+          </li>
+          <li class="course-step">
+            <h3 class="course-step-title">Thanh toán</h3>
+            <p class="course-step-text"><span class="placeholder">[CẦN BỔ SUNG — hình thức thanh toán]</span></p>
+          </li>
+          <li class="course-step">
+            <h3 class="course-step-title">Nhận bài học</h3>
+            <p class="course-step-text"><span class="placeholder">[CẦN BỔ SUNG — cách nhận bài học / lịch học]</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CÂU HỎI THƯỜNG GẶP — native <details>/<summary> (keyboard + screen reader support built in) -->
+    <section class="section" id="hoi-dap" aria-labelledby="hoi-dap-title">
+      <div class="container">
+        <h2 class="section-title" id="hoi-dap-title">Câu hỏi thường gặp</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">Học phí mỗi khóa học là bao nhiêu?</summary>
+            <div class="faq-answer"><p><span class="placeholder">[CẦN BỔ SUNG — học phí từng khóa]</span></p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Khóa học diễn ra online hay offline?</summary>
+            <div class="faq-answer"><p><span class="placeholder">[CẦN BỔ SUNG — hình thức học]</span></p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Tôi thanh toán bằng cách nào?</summary>
+            <div class="faq-answer"><p><span class="placeholder">[CẦN BỔ SUNG — hình thức thanh toán]</span></p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Sau khi thanh toán, tôi nhận bài học như thế nào?</summary>
+            <div class="faq-answer"><p><span class="placeholder">[CẦN BỔ SUNG — cách nhận bài học]</span></p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Có chính sách hoàn tiền không?</summary>
+            <div class="faq-answer"><p><span class="placeholder">[CẦN BỔ SUNG — chính sách hoàn tiền]</span></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ĐĂNG KÝ — same field markup, validation and backend note as the lien-he.html contact form -->
+    <section class="section" id="dang-ky" aria-labelledby="dang-ky-title">
+      <div class="container">
+        <h2 class="section-title" id="dang-ky-title">Đăng ký khóa học</h2>
+        <div class="contact-layout">
+          <div class="course-summary-box">
+            <h3 class="course-summary-title">Khóa học đã chọn</h3>
+            <div class="course-summary" data-courses="summary" aria-live="polite">
+              <p class="course-summary-empty">Chọn khóa học trong biểu mẫu.</p>
+            </div>
+          </div>
+
+          <form class="contact-form" id="course-form" action="khoa-hoc.html#course-form" method="post" tabindex="-1" novalidate>
+            <p class="form-intro">Các trường không ghi «không bắt buộc» là bắt buộc.</p>
+            <div class="field">
+              <label class="field-label" for="rf-name">Họ tên</label>
+              <input class="field-input" id="rf-name" name="name" type="text" autocomplete="name" required>
+              <p class="field-error" id="rf-name-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="rf-phone">Số điện thoại</label>
+              <input class="field-input" id="rf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              <p class="field-error" id="rf-phone-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="rf-email">Email <span class="field-optional">(không bắt buộc)</span></label>
+              <input class="field-input" id="rf-email" name="email" type="email" autocomplete="email" inputmode="email"
+                     autocapitalize="off" spellcheck="false" placeholder="ten@congty.vn" aria-describedby="rf-email-hint">
+              <p class="field-hint" id="rf-email-hint">Chúng tôi chỉ dùng email để phản hồi bạn.</p>
+              <p class="field-error" id="rf-email-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="rf-course">Khóa học</label>
+<!-- ============ COURSES — no-JS FALLBACK: SELECT (START) — same ids/names as COURSES in courses.js ============ -->
+              <select class="field-input field-select" id="rf-course" name="course" required data-courses="select">
+                <option value="">— Chọn khóa học —</option>
+                  <option value="khoa-hoc-1">[CẦN BỔ SUNG — tên khóa học 1]</option>
+                  <option value="khoa-hoc-2">[CẦN BỔ SUNG — tên khóa học 2]</option>
+                  <option value="khoa-hoc-3">[CẦN BỔ SUNG — tên khóa học 3]</option>
+              </select>
+<!-- ============ COURSES — no-JS FALLBACK: SELECT (END) ============ -->
+              <p class="field-error" id="rf-course-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="rf-note">Ghi chú <span class="field-optional">(không bắt buộc)</span></label>
+              <textarea class="field-input field-textarea" id="rf-note" name="note" rows="4" autocomplete="off"></textarea>
+              <p class="field-error" id="rf-note-error" aria-live="polite"></p>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" id="rf-submit" type="submit" title="Gửi đăng ký">
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <span class="btn-label">Gửi đăng ký</span>
+              </button>
+            </div>
+            <p class="btn-error-text" id="rf-submit-error" role="alert"></p>
+            <p class="visually-hidden" id="rf-status" role="status" aria-live="polite"></p>
+            <p><span class="placeholder">[CẦN BỔ SUNG — kết nối backend / cổng thanh toán]</span></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER — design/site-footer.md: brand · footer nav · compact contact · legal -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- Static mark: the footer nav already has "Trang chủ", so no second logo link (logo-usage.md §3.3) -->
+      <p class="brand-logo-static" data-fallback-box>
+        <picture>
+          <source type="image/webp" srcset="assets/logo/logo-horizontal.webp">
+          <img class="brand-logo brand-logo-footer" src="assets/logo/logo-horizontal.png" width="138" height="28" alt="Hinton Media" decoding="async" loading="lazy" data-fallback>
+        </picture>
+        <span class="wordmark wordmark-footer img-fallback" hidden aria-hidden="true">Hinton Media</span>
+      </p>
+      <nav class="footer-nav" aria-label="Điều hướng chân trang">
+        <ul class="footer-nav-list" role="list">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="dich-vu.html">Dịch vụ</a></li>
+          <li><a href="khoa-hoc.html" aria-current="page">Khóa học</a></li>
+          <li><a href="tin-tuc.html">Tin tức</a></li>
+          <li><a href="hoat-dong.html">Hoạt động</a></li>
+          <li><a href="khach-hang.html">Khách hàng</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+<!-- ============ CONTACT INFO — no-JS FALLBACK, FOOTER (START) — same values as CONTACT in contact.js; identical on all 14 pages ============ -->
+      <p class="footer-contact">
+        <span class="footer-contact-phones" data-contact="phones"><a class="contact-link contact-link-tel" href="tel:+84365061186"><span class="visually-hidden">Gọi </span>0365 061 186</a><a class="contact-link contact-link-tel" href="tel:+84902223730"><span class="visually-hidden">Gọi </span>090 222 37 30</a></span>
+        <span data-contact="email"><a class="contact-link contact-link-mail" href="mailto:buihuuthangvimaon@gmail.com">buihuuthangvimaon@gmail.com</a></span>
+      </p>
+<!-- ============ CONTACT INFO — no-JS FALLBACK, FOOTER (END) ============ -->
+      <div class="footer-legal">
+        <p>© 2026 Hinton Media / Công ty TNHH Hinton Group · MST: 0202209999</p>
+        <p>Địa chỉ đăng ký: Phường An Phong, Hải Phòng</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

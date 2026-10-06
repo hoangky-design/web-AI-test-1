@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hoạt động | Hinton Media</title>
+  <meta name="description" content="Hình ảnh các buổi workshop, lớp học và hoạt động sản xuất của Hinton Media tại Hải Phòng.">
+  <!-- TODO(domain): no official domain yet ([CẦN BỔ SUNG — tên miền chính thức]). Once confirmed, add:
+         <link rel="canonical" href="https://DOMAIN/hoat-dong.html">
+         <meta property="og:url" content="https://DOMAIN/hoat-dong.html">
+       and change og:image below to the absolute https://DOMAIN/assets/photos/team-suits-group.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="Hinton Media">
+  <meta property="og:title" content="Hoạt động | Hinton Media">
+  <meta property="og:description" content="Hình ảnh các buổi workshop, lớp học và hoạt động sản xuất của Hinton Media tại Hải Phòng.">
+  <meta property="og:image" content="assets/photos/team-suits-group.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1280">
+  <meta property="og:image:alt" content="Nhóm mười người, nam và nữ, mặc vest tối màu đứng tạo dáng trước phông nền trắng">
+  <!-- Favicons: 32×32 PNG + 180×180 apple-touch-icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
+  <!-- Barlow: loaded here (not via CSS @import). Weights 400/500/600 = --font-weight-base/-medium/-semibold. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+    /* Image fallback: if an <img data-fallback> fails to load, hide it and reveal the
+       visible text next to it (.img-fallback) so the name never disappears.
+       Capture phase, registered in <head>, so it runs before any image can fail. */
+    window.addEventListener('error', function (e) {
+      var img = e.target;
+      if (!img || img.tagName !== 'IMG' || !img.hasAttribute('data-fallback')) return;
+      var box = img.closest('[data-fallback-box]');
+      var text = box && box.querySelector('.img-fallback');
+      if (!text) return;
+      img.hidden = true;
+      text.hidden = false;
+      text.removeAttribute('aria-hidden');
+      box.classList.add('logo-missing');
+    }, true);
+  </script>
+  <script src="contact.js" defer></script>
+  <script src="site.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="news.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua, đến nội dung chính</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand logo: design/logo-usage.md + site-header.md §3.1. Links home; aria-current only on index.html. -->
+      <a class="brand-logo-link" href="index.html" data-fallback-box>
+        <picture>
+          <source type="image/webp" srcset="assets/logo/logo-horizontal.webp">
+          <img class="brand-logo brand-logo-header" src="assets/logo/logo-horizontal.png" width="197" height="40" alt="Hinton Media" decoding="async" data-fallback>
+        </picture>
+        <span class="wordmark img-fallback" hidden aria-hidden="true">Hinton Media</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle-label">Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav-list" id="primary-menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="dich-vu.html">Dịch vụ</a></li>
+          <li><a href="khoa-hoc.html">Khóa học</a></li>
+          <li><a href="tin-tuc.html">Tin tức</a></li>
+          <li><a href="hoat-dong.html" aria-current="page">Hoạt động</a></li>
+          <li><a href="khach-hang.html">Khách hàng</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+          <!-- Account link (site.js swaps it to "Bài học của tôi" / "Quản trị" when logged in on the Node server) -->
+          <li class="nav-item-account"><a class="nav-account-link" href="dang-nhap.html" data-account-link>Đăng nhập</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Page header: design/page-header.md -->
+    <header class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Đường dẫn trang">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+            <li class="breadcrumb-item"><span aria-current="page">Hoạt động</span></li>
+          </ol>
+        </nav>
+        <h1 class="page-title section-heading" id="page-title">
+          <span class="section-heading-vi">Hoạt động</span>
+        </h1>
+        <p class="page-intro">Hình ảnh các buổi workshop, lớp học và hoạt động sản xuất. Portfolio chi tiết đang được cập nhật.</p>
+      </div>
+    </header>
+    <!-- HOẠT ĐỘNG — sitemap §3.4 -->
+    <div class="page-body">
+      <div class="container">
+        <!-- design/project-grid.md populated grid, STATIC cards as non-linked <figure>s. Captions describe only
+             what is visible in each photo. 6 photos fill the 1/2/3-column grid evenly. -->
+        <ul class="card-grid project-grid" role="list">
+          <li class="project-card">
+            <figure class="project-card-figure">
+              <div class="project-card-media">
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/workshop-speaker-audience.webp">
+                  <img class="project-card-thumb" src="assets/photos/workshop-speaker-audience.jpg" width="1920" height="1280" alt="Một người mặc vest đứng quay lưng về phía máy ảnh, nhìn ra hội trường kín chỗ ngồi" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <figcaption class="project-card-caption">Người đứng trước hội trường kín chỗ</figcaption>
+            </figure>
+          </li>
+          <li class="project-card">
+            <figure class="project-card-figure">
+              <div class="project-card-media">
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/workshop-drive-02.webp">
+                  <img class="project-card-thumb" src="assets/photos/workshop-drive-02.jpg" width="1920" height="1280" alt="Hội trường đông người, nhiều người giơ tay hướng lên phía trước, nơi có người đứng cạnh các standee" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <figcaption class="project-card-caption">Hội trường đông người, nhiều người giơ tay</figcaption>
+            </figure>
+          </li>
+          <li class="project-card">
+            <figure class="project-card-figure">
+              <div class="project-card-media">
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/workshop-drive-03.webp">
+                  <img class="project-card-thumb" src="assets/photos/workshop-drive-03.jpg" width="1920" height="1440" alt="Một người mặc áo sơ mi trắng đứng nói trong phòng học, học viên ngồi tại các dãy bàn dài, nhiều người đang ghi chép" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <figcaption class="project-card-caption">Người đứng nói, học viên ngồi ghi chép tại bàn dài</figcaption>
+            </figure>
+          </li>
+          <li class="project-card">
+            <figure class="project-card-figure">
+              <div class="project-card-media">
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/workshop-drive-04.webp">
+                  <img class="project-card-thumb" src="assets/photos/workshop-drive-04.jpg" width="1920" height="1278" alt="Một người mặc vest đứng giữa lối đi dang tay, phía sau là lớp học đông người ngồi trước máy tính xách tay" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <figcaption class="project-card-caption">Người dang tay giữa lớp học đông người dùng máy tính xách tay</figcaption>
+            </figure>
+          </li>
+          <li class="project-card">
+            <figure class="project-card-figure">
+              <div class="project-card-media">
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/media-team.webp">
+                  <img class="project-card-thumb" src="assets/photos/media-team.jpg" width="916" height="651" alt="Bóng người đội mũ lưỡi trai đứng sau máy quay phim, ánh sáng ngược" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <figcaption class="project-card-caption">Người đứng sau máy quay phim</figcaption>
+            </figure>
+          </li>
+          <li class="project-card">
+            <figure class="project-card-figure">
+              <div class="project-card-media">
+                <picture>
+                  <source type="image/webp" srcset="assets/photos/growth-solutions.webp">
+                  <img class="project-card-thumb" src="assets/photos/growth-solutions.jpg" width="916" height="750" alt="Hình minh họa các biểu tượng mạng xã hội như Facebook, Instagram, TikTok, YouTube, Telegram, WhatsApp trên nền xanh" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <figcaption class="project-card-caption">Hình minh họa biểu tượng các mạng xã hội</figcaption>
+            </figure>
+          </li>
+        </ul>
+        <div class="project-cta">
+          <a class="btn btn-primary" href="lien-he.html" title="Liên hệ tư vấn"><span class="btn-label">Liên hệ tư vấn</span></a>
+          <span class="placeholder">[CẦN BỔ SUNG — portfolio, case study]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIN TỨC MỚI — news.js fills the 3 latest posts from the Node server; stays hidden without posts/server -->
+    <section class="section" id="tin-moi" aria-labelledby="tin-moi-title" data-posts="latest" hidden>
+      <div class="container">
+        <h2 class="section-title" id="tin-moi-title">Tin tức mới</h2>
+        <ul class="card-grid post-grid" role="list"></ul>
+        <div class="project-cta">
+          <a class="btn btn-secondary" href="tin-tuc.html" title="Xem tất cả tin tức"><span class="btn-label">Xem tất cả tin tức</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER — design/site-footer.md: brand · footer nav · compact contact · legal -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- Static mark: the footer nav already has "Trang chủ", so no second logo link (logo-usage.md §3.3) -->
+      <p class="brand-logo-static" data-fallback-box>
+        <picture>
+          <source type="image/webp" srcset="assets/logo/logo-horizontal.webp">
+          <img class="brand-logo brand-logo-footer" src="assets/logo/logo-horizontal.png" width="138" height="28" alt="Hinton Media" decoding="async" loading="lazy" data-fallback>
+        </picture>
+        <span class="wordmark wordmark-footer img-fallback" hidden aria-hidden="true">Hinton Media</span>
+      </p>
+      <nav class="footer-nav" aria-label="Điều hướng chân trang">
+        <ul class="footer-nav-list" role="list">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="dich-vu.html">Dịch vụ</a></li>
+          <li><a href="khoa-hoc.html">Khóa học</a></li>
+          <li><a href="tin-tuc.html">Tin tức</a></li>
+          <li><a href="hoat-dong.html" aria-current="page">Hoạt động</a></li>
+          <li><a href="khach-hang.html">Khách hàng</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+<!-- ============ CONTACT INFO — no-JS FALLBACK, FOOTER (START) — same values as CONTACT in contact.js; identical on all 14 pages ============ -->
+      <p class="footer-contact">
+        <span class="footer-contact-phones" data-contact="phones"><a class="contact-link contact-link-tel" href="tel:+84365061186"><span class="visually-hidden">Gọi </span>0365 061 186</a><a class="contact-link contact-link-tel" href="tel:+84902223730"><span class="visually-hidden">Gọi </span>090 222 37 30</a></span>
+        <span data-contact="email"><a class="contact-link contact-link-mail" href="mailto:buihuuthangvimaon@gmail.com">buihuuthangvimaon@gmail.com</a></span>
+      </p>
+<!-- ============ CONTACT INFO — no-JS FALLBACK, FOOTER (END) ============ -->
+      <div class="footer-legal">
+        <p>© 2026 Hinton Media / Công ty TNHH Hinton Group · MST: 0202209999</p>
+        <p>Địa chỉ đăng ký: Phường An Phong, Hải Phòng</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
