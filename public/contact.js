@@ -16,9 +16,9 @@ var CONTACT = {
     { display: '0365 061 186', e164: '+84365061186' },
     { display: '090 222 37 30', e164: '+84902223730' }
   ],
-  email: 'buihuuthangvimaon@gmail.com',
+  email: 'congtyhintongroup@gmail.com',
   office: 'Hoàng Huy Commerce, Lê Chân, Hải Phòng',
-  mapUrl: 'https://www.google.com/maps/search/?api=1&query=Hoang+Huy+Commerce,+Le+Chan,+Hai+Phong',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=Hinton+Group+Media+%26+Truyen+Thong,+Hai+Phong',
   hours: { open: '09:00', close: '17:00', days: 'Thứ Hai đến Chủ nhật' },
   social: [
     { label: 'Facebook', url: 'https://www.facebook.com/BuiHuuThangTeam' },
