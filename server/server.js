@@ -49,7 +49,8 @@ app.use('/uploads', express.static(cfg.UPLOAD_DIR, {
 }));
 
 /* ---------- Static site ---------- */
-app.use(express.static(cfg.PUBLIC_DIR, { extensions: ['html'], index: 'index.html', maxAge: '1h' }));
+// Revalidate static assets so footer/contact edits appear immediately after refresh.
+app.use(express.static(cfg.PUBLIC_DIR, { extensions: ['html'], index: 'index.html', maxAge: 0 }));
 app.use((req, res) => res.status(404).sendFile(path.join(cfg.PUBLIC_DIR, '404.html')));
 
 /* ---------- Errors ---------- */

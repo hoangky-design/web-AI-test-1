@@ -47,42 +47,17 @@ var COURSES_API = '/api/courses';
 
 var COURSES = [
   {
-    id: 'khoa-hoc-1',
-    name: null,
-    summary: null,
-    price: null,
+    id: 'khoa-hoc-edit-video-co-ban',
+    name: 'Khóa học Edit Video Cơ Bản',
+    summary: 'Dành cho người mới bắt đầu, tập trung vào CapCut PC và quy trình thực hành để tự hoàn thiện video TikTok, Reels hoặc YouTube Shorts.',
+    price: '500.000 đ',
     duration: null,
-    lessons: null,
-    level: null,
-    format: null,
+    lessons: '2 bài học',
+    level: 'Cơ bản',
+    format: 'Video online',
+    hideEmpty: true,
     image: { webp: 'assets/photos/workshop-drive-03.webp', jpg: 'assets/photos/workshop-drive-03.jpg', width: 1920, height: 1440,
              alt: 'Một người mặc áo sơ mi trắng đứng nói trong phòng học, học viên ngồi tại các dãy bàn dài, nhiều người đang ghi chép' },
-    buyUrl: null
-  },
-  {
-    id: 'khoa-hoc-2',
-    name: null,
-    summary: null,
-    price: null,
-    duration: null,
-    lessons: null,
-    level: null,
-    format: null,
-    image: { webp: 'assets/photos/workshop-drive-04.webp', jpg: 'assets/photos/workshop-drive-04.jpg', width: 1920, height: 1278,
-             alt: 'Một người mặc vest đứng giữa lối đi dang tay, phía sau là lớp học đông người ngồi trước máy tính xách tay' },
-    buyUrl: null
-  },
-  {
-    id: 'khoa-hoc-3',
-    name: null,
-    summary: null,
-    price: null,
-    duration: null,
-    lessons: null,
-    level: null,
-    format: null,
-    image: { webp: 'assets/photos/workshop-speaker-audience.webp', jpg: 'assets/photos/workshop-speaker-audience.jpg', width: 1920, height: 1280,
-             alt: 'Một người mặc vest đứng quay lưng về phía máy ảnh, nhìn ra hội trường kín chỗ ngồi' },
     buyUrl: null
   }
 ];
@@ -136,7 +111,7 @@ var COURSES = [
     var p = el('p', 'course-card-text'); p.appendChild(value(c.summary, 'mô tả ngắn')); body.appendChild(p);
 
     var dl = el('dl', 'course-meta');
-    [['Thời lượng', c.duration, 'thời lượng'], ['Số buổi học', c.lessons, 'số buổi'],
+    [['Thời lượng', c.duration, 'thời lượng'], ['Nội dung', c.lessons, 'số bài học'],
      ['Trình độ', c.level, 'trình độ'], ['Hình thức', c.format, 'online / offline']].forEach(function (m) {
       if (c.hideEmpty && !m[1]) return; // server data: the admin left it empty on purpose
       var row = el('div', 'course-meta-row');

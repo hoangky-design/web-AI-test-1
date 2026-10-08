@@ -182,3 +182,127 @@
     })
     .catch(function () {});
 })();
+
+/* Rich footer: shared across every static page. The existing HTML footer remains
+   as a no-JS fallback; this enhancement gives visitors the full branch/map UI. */
+(function () {
+  var footer = document.querySelector('.site-footer');
+  if (!footer) return;
+
+  var branches = [
+    {
+      code: 'CS1', city: 'Hải Phòng',
+      address: 'Tổ dân phố Phi Xá (Nhà ông Bùi Văn Tuyến), Phường An Phong, TP Hải Phòng',
+      query: 'Tổ dân phố Phi Xá, Phường An Phong, Hải Phòng'
+    },
+    {
+      code: 'CS2', city: 'Hải Phòng',
+      address: 'Hoàng Huy Commerce, Lê Chân, Hải Phòng',
+      query: 'Hinton Group Media & Truyền Thông, Hải Phòng'
+    },
+    {
+      code: 'CS3', city: 'Hà Nội',
+      address: '66 Hồ Tùng Mậu, Cầu Giấy, Hà Nội',
+      query: '66 Hồ Tùng Mậu, Cầu Giấy, Hà Nội'
+    },
+    {
+      code: 'CS4', city: 'TP. Hồ Chí Minh',
+      address: 'Chung cư Conic Riverside, Phường 7, Quận 8, TP.HCM',
+      query: 'Chung cư Conic Riverside, Phường 7, Quận 8, TP Hồ Chí Minh'
+    }
+  ];
+
+  function branchMarkup(b) {
+    return '<article class="footer-branch">' +
+      '<h3><span>' + b.code + '</span>' + b.city + '</h3>' +
+      '<address>' + b.address + '</address>' +
+    '</article>';
+  }
+  function optionMarkup(b, i) {
+    return '<option value="' + i + '"' + (i === 1 ? ' selected' : '') + '>' +
+      b.code + ' · ' + (i === 1 ? 'Hinton Group Media & Truyền Thông' : b.city) + '</option>';
+  }
+  function mapEmbed(b) {
+    return 'https://www.google.com/maps?q=' + encodeURIComponent(b.query) + '&output=embed';
+  }
+  function mapOpen(b) {
+    return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(b.query);
+  }
+
+  footer.innerHTML =
+    '<div class="container footer-inner footer-shell">' +
+      '<div class="footer-intro">' +
+        '<a class="footer-brand" href="index.html" aria-label="Hinton Media — Trang chủ">' +
+          '<picture><source type="image/webp" srcset="assets/logo/logo-horizontal.webp">' +
+          '<img src="assets/logo/logo-horizontal.png" width="138" height="28" alt="Hinton Media" loading="lazy" decoding="async"></picture>' +
+        '</a>' +
+        '<p>Truyền thông, tiếp thị và đào tạo thực hành giúp thương hiệu tạo dấu ấn trên nền tảng số.</p>' +
+      '</div>' +
+      '<nav class="footer-nav footer-discover" aria-label="Khám phá">' +
+        '<p class="footer-eyebrow">Khám phá</p>' +
+        '<ul class="footer-nav-list" role="list">' +
+          '<li><a href="gioi-thieu.html">Về Hinton</a></li>' +
+          '<li><a href="dich-vu.html">Dịch vụ</a></li>' +
+          '<li><a href="khach-hang.html">Dự án</a></li>' +
+          '<li><a href="tin-tuc.html">Bài viết</a></li>' +
+          '<li><a href="bai-hoc-cua-toi.html">Dành cho học viên</a></li>' +
+        '</ul>' +
+      '</nav>' +
+      '<div class="footer-rule" aria-hidden="true"></div>' +
+      '<section class="footer-locations" aria-labelledby="footer-locations-title">' +
+        '<h2 id="footer-locations-title">Hệ thống cơ sở</h2>' +
+        '<div class="footer-branch-grid">' + branches.map(branchMarkup).join('') + '</div>' +
+        '<div class="footer-contact-card">' +
+          '<div class="footer-hotlines"><span>Điện thoại tư vấn</span>' +
+            '<div><a href="tel:+84365061186">0365 061 186</a><a href="tel:+84902223730">090 222 37 30</a></div>' +
+          '</div>' +
+          '<div class="footer-email-info"><span>Email</span>' +
+            '<a class="footer-email" href="mailto:congtyhintongroup@gmail.com">congtyhintongroup@gmail.com</a>' +
+          '</div>' +
+          '<a class="footer-cta" href="lien-he.html">Nhận tư vấn <span aria-hidden="true">↗</span></a>' +
+        '</div>' +
+      '</section>' +
+      '<section class="footer-map-panel" aria-labelledby="footer-map-heading">' +
+        '<h2 id="footer-map-heading">Tìm đường đến Hinton</h2>' +
+        '<label for="footer-location-select">Chọn cơ sở</label>' +
+        '<select id="footer-location-select" class="footer-location-select">' + branches.map(optionMarkup).join('') + '</select>' +
+        '<div class="footer-map-canvas">' +
+          '<iframe id="footer-map-frame" src="' + mapEmbed(branches[1]) + '" title="Bản đồ Hinton Group Media &amp; Truyền Thông tại Hải Phòng" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>' +
+        '</div>' +
+        '<p class="footer-map-note">Bản đồ tìm theo địa chỉ. Vui lòng liên hệ để xác nhận điểm đến cụ thể.</p>' +
+        '<a id="footer-map-link" class="footer-map-link" href="' + mapOpen(branches[1]) + '" target="_blank" rel="noopener noreferrer">Mở chỉ đường ↗ <span class="visually-hidden">(mở tab mới)</span></a>' +
+      '</section>' +
+      '<div class="footer-bottom">' +
+        '<p>© 2026 Hinton Media</p>' +
+        '<p>Để tác phẩm nói lên giá trị.</p>' +
+        '<a href="#top" data-back-to-top>Lên đầu trang ↑</a>' +
+      '</div>' +
+    '</div>' +
+    '<aside class="footer-social-rail" aria-label="Liên hệ nhanh">' +
+      '<a class="footer-social footer-social-phone" href="tel:+84365061186" aria-label="Gọi Hinton Media">' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2.8 9 2.2l2 4.7-1.7 1.4a15.2 15.2 0 0 0 6.4 6.4l1.4-1.7 4.7 2-.6 2.4a3 3 0 0 1-3.2 2.3C10.7 18.8 5.2 13.3 4.3 6A3 3 0 0 1 6.6 2.8Z"/></svg>' +
+      '</a>' +
+      '<a class="footer-social footer-social-facebook" href="https://www.facebook.com/BuiHuuThangTeam" target="_blank" rel="noopener noreferrer" aria-label="Facebook Hinton Media"><span aria-hidden="true">f</span></a>' +
+      '<a class="footer-social footer-social-zalo" href="https://zalo.me/84365061186" target="_blank" rel="noopener noreferrer" aria-label="Zalo Hinton Media"><span aria-hidden="true">Zalo</span></a>' +
+    '</aside>';
+
+  var select = document.getElementById('footer-location-select');
+  var frame = document.getElementById('footer-map-frame');
+  var mapLink = document.getElementById('footer-map-link');
+  select.addEventListener('change', function () {
+    var branch = branches[Number(select.value)] || branches[1];
+    frame.src = mapEmbed(branch);
+    frame.title = 'Bản đồ ' + branch.code + ' Hinton Media tại ' + branch.address;
+    mapLink.href = mapOpen(branch);
+  });
+
+  var current = location.pathname.replace(/^.*\//, '') || 'index.html';
+  Array.prototype.forEach.call(footer.querySelectorAll('.footer-nav a'), function (a) {
+    if (a.getAttribute('href') === current) a.setAttribute('aria-current', 'page');
+  });
+  var topLink = footer.querySelector('[data-back-to-top]');
+  topLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
